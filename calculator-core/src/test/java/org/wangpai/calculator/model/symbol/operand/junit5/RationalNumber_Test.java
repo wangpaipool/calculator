@@ -1,7 +1,6 @@
 package org.wangpai.calculator.model.symbol.operand.junit5;
 
 import org.wangpai.calculator.exception.CalculatorException;
-import org.wangpai.calculator.exception.SyntaxException;
 import org.wangpai.calculator.exception.UndefinedException;
 import org.wangpai.calculator.model.symbol.operand.Figure;
 import org.wangpai.calculator.model.symbol.operand.Operand;
@@ -105,7 +104,6 @@ public class RationalNumber_Test {
         // 不是类 Operand 及其子类就返回 false
         assertFalse(rationalNumber.equals(BigInteger.ONE));
 
-
         var rationalNumberOther = rationalNumber.clone();
         // 符合相等意义返回 true
         assertTrue(rationalNumber.equals(rationalNumberOther));
@@ -131,7 +129,6 @@ public class RationalNumber_Test {
                         + "/" + rationalNumber.getDenominator().toString(),
                 rationalNumber.toString());
     }
-
 
     @Test
     public void test_isProperFraction() throws CalculatorException {
